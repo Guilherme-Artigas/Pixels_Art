@@ -8,9 +8,24 @@ for (let indice = 1; indice <= 25; indice += 1) {
 let selected = 'black';
 
 const corPreto = window.document.querySelector('li.black');
+
 const corbottleGreen = window.document.querySelector('li.bottleGreen');
+const r1 = Math.floor(Math.random() * 255);
+const g1 = Math.floor(Math.random() * 255);
+const b1 = Math.floor(Math.random() * 255);
+corbottleGreen.style.backgroundColor = `rgb(${r1}, ${g1}, ${b1})`;
+
 const coroceanGreen = window.document.querySelector('li.oceanGreen');
+const r2 = Math.floor(Math.random() * 255);
+const g2 = Math.floor(Math.random() * 255);
+const b2 = Math.floor(Math.random() * 255);
+coroceanGreen.style.backgroundColor = `rgb(${r2}, ${g2}, ${b2})`;
+
 const corblueVioletWheel = window.document.querySelector('li.blueVioletWheel');
+const r3 = Math.floor(Math.random() * 255);
+const g3 = Math.floor(Math.random() * 255);
+const b3 = Math.floor(Math.random() * 255);
+corblueVioletWheel.style.backgroundColor = `rgb(${r3}, ${g3}, ${b3})`;
 
 corPreto.addEventListener('click', function () {
   corbottleGreen.classList.remove('selected');
@@ -59,7 +74,10 @@ buttonGenerator.addEventListener('click', function () {
   if (boardSizeString.value === '') {
     alert('Board inválido!');
   } else {
-    const boardSizeNumber = parseInt(boardSizeString.value);
+    let boardSizeNumber = parseInt(boardSizeString.value);
+    if (boardSizeNumber > 50) {
+      boardSizeNumber = 50;
+    };
     ulPixelBoard.style.height = '100%';
     ulPixelBoard.style.width = '100%';
     for (let indice = 1; indice <= (boardSizeNumber * boardSizeNumber - 25); indice += 1) {
