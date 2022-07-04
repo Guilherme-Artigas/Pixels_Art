@@ -4,3 +4,24 @@
   padding: 0px;
 }
 
+body {
+  text-align: center;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 30px;
+}
+.black {
+  background: black;
+}
+.oceanGreen {
+  background: #2FC18C;
+}
+.bottleGreen {
+  background: #036B52;
+}
+.blueVioletWheel {
+  background: #41197F;
+}
