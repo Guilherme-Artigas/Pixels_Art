@@ -39,32 +39,37 @@ corbottleGreen.addEventListener('click', function () {
   coroceanGreen.classList.remove('selected');
   corblueVioletWheel.classList.remove('selected');
   corbottleGreen.classList.add('selected');
-  selected = 'bottleGreen';
+  // selected = 'bottleGreen';
+  selected = `rgb(${r1}, ${g1}, ${b1})`;
 });
 coroceanGreen.addEventListener('click', function () {
   corPreto.classList.remove('selected');
   corbottleGreen.classList.remove('selected');
   corblueVioletWheel.classList.remove('selected');
   coroceanGreen.classList.add('selected');
-  selected = 'oceanGreen';
+  // selected = 'oceanGreen';
+  selected = `rgb(${r2}, ${g2}, ${b2})`;
 });
 corblueVioletWheel.addEventListener('click', function () {
   corPreto.classList.remove('selected');
   corbottleGreen.classList.remove('selected');
   coroceanGreen.classList.remove('selected');
   corblueVioletWheel.classList.add('selected');
-  selected = 'blueVioletWheel';
+  // selected = 'blueVioletWheel';
+  selected = `rgb(${r3}, ${g3}, ${b3})`;
 });
 
 ulPixelBoard.addEventListener('click', function (arg1) {
-  arg1.target.className = 'pixel ' + selected;
+  // arg1.target.className = 'pixel ' + selected;
+  arg1.target.style.backgroundColor = selected;
 });
 
 const buttonClear = window.document.querySelector('button#clear-board');
 buttonClear.addEventListener('click', function () {
   const allLi = window.document.querySelectorAll('li.pixel');
   for (let i of allLi) {
-    i.className = 'pixel white';
+    i.className = 'pixel';
+    i.style.backgroundColor = 'white';
   };
 });
 
